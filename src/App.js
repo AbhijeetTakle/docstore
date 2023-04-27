@@ -83,6 +83,8 @@ function App() {
       .then((res) => res.json())
       .then((response) => {
         setDocs([...docs, response]);
+        e.target.reset();
+        setFile(undefined);
       })
       .catch((err) => {
         console.log(err);
